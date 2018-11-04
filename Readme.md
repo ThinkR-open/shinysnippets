@@ -1,51 +1,78 @@
-# A series of shiny related RStudio Snippets 
 
-## How to install 
+<!-- README.md is generated from README.Rmd. Please edit that file -->
 
-Copy and paste these snippets to Tools > Global Options > Code > Editing > Edit Snippets
+# shinysnippets
 
-## Modules
+The goal of shinysnippets is to …
 
-```
-snippet module
-	${1:name}ui <- function(id){
-		ns <- NS(id)
-		tagList(
-		
-			)
-		}
+## Installation of snippets
 
-	${1:name} <- function(input, output, session){
-		ns <- session\$ns
-	}
-	
-	# Copy in UI
-	${1:name}ui("${1:name}ui")
-	
-	# Copy in server
-	callModule(${1:name}, "${1:name}ui")
+### Via the package
+
+You can install the dev of {shinysnippets} from GitHub:
+
+``` r
+remotes::install_github("Thinkr-open/shinysnippets")
 ```
 
-![](module_snippet.gif)
+Then run:
 
-## observeEvent 
-
-```
-snippet observe_event
-	observeEvent( ${1:event} , {
-	
-	})
+``` r
+shinysnippets::add_snippets()
 ```
 
-![](observeEvent_snippet.gif)
+You’ll be asked to validate the writing of the snippets in
+`~/.R/snippets/r.snippets`.
 
-## withProgress
+Restart RStudio to make these snippets effective.
 
-```
-snippet with_progress
-	withProgress( message = "${1:message}" , {
-	
-	})
-```
+### Manually
 
-![](with_progress_snippet.gif)
+Copy and paste these snippets to Tools \> Global Options \> Code \>
+Editing \> Edit Snippets.
+
+## Snippets list
+
+### Modules
+
+    snippet module
+        ${1:name}ui <- function(id){
+            ns <- NS(id)
+            tagList(
+            
+                )
+            }
+    
+        ${1:name} <- function(input, output, session){
+            ns <- session\$ns
+        }
+        
+        # Copy in UI
+        ${1:name}ui("${1:name}ui")
+        
+        # Copy in server
+        callModule(${1:name}, "${1:name}ui")
+
+![](readmefigs/module_snippet.gif)
+
+### observeEvent
+
+    snippet observe_event
+        observeEvent( ${1:event} , {
+        
+        })
+
+![](readmefigs/observeEvent_snippet.gif)
+
+### withProgress
+
+    snippet with_progress
+        withProgress( message = "${1:message}" , {
+        
+        })
+
+![](readmefigs/with_progress_snippet.gif)
+
+Please note that the \[34m’shinysnippets’\[39m project is released with
+a [Contributor Code of Conduct](CODE_OF_CONDUCT.md). By contributing to
+this project, you agree to abide by its terms.

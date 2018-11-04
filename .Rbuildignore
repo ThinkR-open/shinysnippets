@@ -1,0 +1,7 @@
+^readmefigs$
+^CODE_OF_CONDUCT\.md$
+^README\.Rmd$
+^LICENSE\.md$
+^data-raw$
+^.*\.Rproj$
+^\.Rproj\.user$

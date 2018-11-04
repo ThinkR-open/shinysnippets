@@ -1,0 +1,27 @@
+snippet module
+	${1:name}ui <- function(id){
+		ns <- NS(id)
+		tagList(
+		
+			)
+		}
+
+	${1:name} <- function(input, output, session){
+		ns <- session\$ns
+	}
+	
+	# Copy in UI
+	${1:name}ui("${1:name}ui")
+	
+	# Copy in server
+	callModule(${1:name}, "${1:name}ui")
+	
+snippet observe_event
+	observeEvent( ${1:event} , {
+	
+	})
+	
+snippet with_progress
+	withProgress( message = "${1:message}" , {
+	
+	})
