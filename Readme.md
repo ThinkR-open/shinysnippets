@@ -64,6 +64,32 @@ Editing \> Edit Snippets.
 
 ![](readmefigs/observeEvent_snippet.gif)
 
+### sidebar\_page
+
+    snippet sidebar_page
+        library(shiny)
+        
+        ui <- fluidPage(
+          titlePanel( "${1:title}" ), 
+          
+          sidebarLayout(
+            sidebarPanel(
+            
+            ),
+            mainPanel(
+            
+            )
+          )
+        )
+        
+        server <- function(input, output, session) {
+          
+        }
+        
+        shinyApp(ui, server)
+
+![](readmefigs/sidebarpage.gif)
+
 ### withProgress
 
     snippet with_progress
@@ -73,6 +99,6 @@ Editing \> Edit Snippets.
 
 ![](readmefigs/with_progress_snippet.gif)
 
-Please note that the \[34m’shinysnippets’\[39m project is released with
-a [Contributor Code of Conduct](CODE_OF_CONDUCT.md). By contributing to
+Please note that the ‘shinysnippets’ project is released with a
+[Contributor Code of Conduct](CODE_OF_CONDUCT.md). By contributing to
 this project, you agree to abide by its terms.

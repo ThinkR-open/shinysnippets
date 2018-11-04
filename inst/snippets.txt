@@ -25,3 +25,26 @@ snippet with_progress
 	withProgress( message = "${1:message}" , {
 	
 	})
+	
+snippet sidebar_page
+	library(shiny)
+	
+	ui <- fluidPage(
+	  titlePanel( "{$1:title}" ), 
+	  
+	  sidebarLayout(
+	    sidebarPanel(
+	    
+	    ),
+	    mainPanel(
+	    
+	    )
+    )
+	)
+	
+	server <- function(input, output, session) {
+	  
+	}
+	
+	shinyApp(ui, server)
+
