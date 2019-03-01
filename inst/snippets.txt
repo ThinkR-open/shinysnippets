@@ -48,3 +48,5 @@ snippet sidebar_page
 	
 	shinyApp(ui, server)
 
+snippet aa
+  ${1:dataset} <- ${1:dataset} %>% ${0}
