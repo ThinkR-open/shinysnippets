@@ -2,7 +2,7 @@ snippet module
 	${1:name}ui <- function(id){
 		ns <- NS(id)
 		tagList(
-		
+		${0}
 			)
 		}
 
@@ -18,11 +18,15 @@ snippet module
 	
 snippet observe_event
 	observeEvent( ${1:event} , {
-	
+	${0}
 	})
 	
 snippet with_progress
 	withProgress( message = "${1:message}" , {
-	
+	${0}
 	})
 
+snippet aa
+	${1:dataset} <- ${1:dataset} %>% ${0}
+
+	
