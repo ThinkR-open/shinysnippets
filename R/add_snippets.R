@@ -8,29 +8,30 @@
 #' add_snippets()
 #' }
 
-add_snippets <- function(){
+add_snippets <- function(rs = "~/.R/snippets/r.snippets"){
   
   res <- FALSE
   
-  if (! file.exists("~/.R/snippets/r.snippets")){
-    message("~/.R/snippets/r.snippets does not exist.")
+  if (! file.exists(rs)){
+    message(paste(rs,"does not exist."))
     message("Create it?")
     x <- readline("Type Y/y to confirm. ")
     
     if (tolower(x) == "y"){
-      file.create("~/.R/snippets/r.snippets")
+      dir.create(dirname(rs),recursive = TRUE,showWarnings = FALSE)
+      file.create(rs)
     } else {
       message("Copy not done")
       return(invisible(res))
     }
   }
   
-  message("This command will write in ~/.R/snippets/r.snippets")
+  message(paste("This command will write in",rs))
   message("Do you wish to continue?")
   x <- readline("Type Y/y to confirm. ")
   
   if (tolower(x) == "y"){
-    res <- file.append("~/.R/snippets/r.snippets", 
+    res <- file.append(rs, 
                 system.file("snippets.txt", 
                             package = "shinysnippets"))
   }

@@ -2,7 +2,7 @@ snippet module
 	${1:name}ui <- function(id){
 		ns <- NS(id)
 		tagList(
-		
+		${0}
 			)
 		}
 
@@ -11,18 +11,22 @@ snippet module
 	}
 	
 	# Copy in UI
-	${1:name}ui("${1:name}ui")
+	#${1:name}ui("${1:name}ui")
 	
 	# Copy in server
-	callModule(${1:name}, "${1:name}ui")
+	#callModule(${1:name}, "${1:name}ui")
 	
 snippet observe_event
 	observeEvent( ${1:event} , {
-	
+	${0}
 	})
 	
 snippet with_progress
 	withProgress( message = "${1:message}" , {
-	
+	${0}
 	})
 
+snippet aa
+	${1:dataset} <- ${1:dataset} %>% ${0}
+
+	
