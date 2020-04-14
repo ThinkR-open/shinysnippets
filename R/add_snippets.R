@@ -1,5 +1,7 @@
 #' Add the snippets to your ~/.R/snippets/r.snippets
 #'
+#' @param rs Path to R snippets
+#' 
 #' @return A message about the success of the copy.
 #' @export
 #'

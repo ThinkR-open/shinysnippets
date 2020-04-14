@@ -11,11 +11,25 @@ knitr::opts_chunk$set(
   fig.path = "man/figures/README-",
   out.width = "100%"
 )
+# Copy reference/images to man/images
+# reference folder is required to work with pkgdown
+if (!dir.exists("man")) {dir.create("man")}
+if (!dir.exists("man/figures")) {dir.create("man/figures")}
+file.copy(list.files("reference/figures", full.names = TRUE),
+          "man/figures", overwrite = TRUE)
+# if (dir.exists("docs")) {
+#   file.copy("reference/figures/thinkr-hex-remedy-favicon.ico",
+#             "docs/favicon.ico", overwrite = TRUE)
+# }
 ```
 
-# shinysnippets
+<!-- badges: start -->
+[![R build status](https://github.com/ThinkR-open/shinysnippets/workflows/R-CMD-check/badge.svg)](https://github.com/ThinkR-open/shinysnippets/actions)
+<!-- badges: end -->
 
-The goal of shinysnippets is to ...
+# shinysnippets <img src="https://raw.githubusercontent.com/ThinkR-open/shinysnippets/master/reference/figures/thinkr-hex-shinysnippets.png" align="right" alt="" width="120" />
+
+The goal of shinysnippets is to save development time while taking advantage of Rstudio snippets for Shiny applications.
 
 ## Installation of snippets
 
@@ -65,7 +79,7 @@ snippet module
 	callModule(${1:name}, "${1:name}ui")
 ```
 
-![](readmefigs/module_snippet.gif)
+![](reference/figures/module_snippet.gif)
 
 ### observeEvent 
 
@@ -76,7 +90,7 @@ snippet observe_event
 	})
 ```
 
-![](readmefigs/observeEvent_snippet.gif)
+![](reference/figures/observeEvent_snippet.gif)
 
 ### sidebar_page
 
@@ -104,7 +118,7 @@ snippet sidebar_page
 	shinyApp(ui, server)
 ```
 
-![](readmefigs/sidebarpage.gif)
+![](reference/figures/sidebarpage.gif)
 
 ### withProgress
 
@@ -115,6 +129,7 @@ snippet with_progress
 	})
 ```
 
-![](readmefigs/with_progress_snippet.gif)
+![](reference/figures/with_progress_snippet.gif)
 
 Please note that the 'shinysnippets' project is released with a [Contributor Code of Conduct](CODE_OF_CONDUCT.md). By contributing to this project, you agree to abide by its terms.
+

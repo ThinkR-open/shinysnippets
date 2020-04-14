@@ -5,3 +5,9 @@
 ^data-raw$
 ^.*\.Rproj$
 ^\.Rproj\.user$
+^dev_history\.R$
+^\.github$
+^_pkgdown\.yml$
+^docs$
+^reference$
+^pkgdown$
