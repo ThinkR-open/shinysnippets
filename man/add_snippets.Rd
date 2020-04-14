@@ -4,7 +4,10 @@
 \alias{add_snippets}
 \title{Add the snippets to your ~/.R/snippets/r.snippets}
 \usage{
-add_snippets()
+add_snippets(rs = "~/.R/snippets/r.snippets")
+}
+\arguments{
+\item{rs}{Path to R snippets}
 }
 \value{
 A message about the success of the copy.
