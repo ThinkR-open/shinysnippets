@@ -1,5 +1,5 @@
 Package: shinysnippets
-Title: RStudio Snippets For Shiny Devs
+Title: RStudio Snippets for Shiny Devs
 Version: 0.0.0.9000
 Authors@R: 
     person(given = "Colin",
