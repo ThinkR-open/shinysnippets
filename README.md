@@ -7,7 +7,7 @@
 status](https://github.com/ThinkR-open/shinysnippets/workflows/R-CMD-check/badge.svg)](https://github.com/ThinkR-open/shinysnippets/actions)
 <!-- badges: end -->
 
-# shinysnippets <img src="https://raw.githubusercontent.com/ThinkR-open/shinysnippets/master/reference/figures/thinkr-hex-shinysnippets.png" align="right" alt="" width="120" />
+# shinysnippets <img src="reference/figures/thinkr-hex-shinysnippets.png" align="right" alt="" width="120" />
 
 The goal of shinysnippets is to save development time while taking
 advantage of Rstudio snippets for Shiny applications.
