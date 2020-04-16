@@ -1,13 +1,13 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
+# shinysnippets <img src="man/figures/thinkr-hex-shinysnippets.png" align="right" alt="" width="120" />
+
 <!-- badges: start -->
 
 [![R build
 status](https://github.com/ThinkR-open/shinysnippets/workflows/R-CMD-check/badge.svg)](https://github.com/ThinkR-open/shinysnippets/actions)
 <!-- badges: end -->
-
-# shinysnippets <img src="reference/figures/thinkr-hex-shinysnippets.png" align="right" alt="" width="120" />
 
 The goal of shinysnippets is to save development time while taking
 advantage of Rstudio snippets for Shiny applications.
@@ -60,7 +60,7 @@ Editing \> Edit Snippets.
         # Copy in server
         callModule(${1:name}, "${1:name}ui")
 
-![](reference/figures/module_snippet.gif)
+![](man/figures/module_snippet.gif)
 
 ### observeEvent
 
@@ -69,7 +69,7 @@ Editing \> Edit Snippets.
         
         })
 
-![](reference/figures/observeEvent_snippet.gif)
+![](man/figures/observeEvent_snippet.gif)
 
 ### sidebar\_page
 
@@ -95,7 +95,7 @@ Editing \> Edit Snippets.
         
         shinyApp(ui, server)
 
-![](reference/figures/sidebarpage.gif)
+![](man/figures/sidebarpage.gif)
 
 ### withProgress
 
@@ -104,7 +104,7 @@ Editing \> Edit Snippets.
         
         })
 
-![](reference/figures/with_progress_snippet.gif)
+![](man/figures/with_progress_snippet.gif)
 
 Please note that the ‘shinysnippets’ project is released with a
 [Contributor Code of Conduct](CODE_OF_CONDUCT.md). By contributing to
