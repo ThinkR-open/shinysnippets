@@ -1,7 +1,7 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# shinysnippets <img src="reference/figures/thinkr-hex-shinysnippets.png" align="right" alt="" width="120" />
+# shinysnippets <img src="man/figures/thinkr-hex-shinysnippets.png" align="right" alt="" width="120" />
 
 <!-- badges: start -->
 

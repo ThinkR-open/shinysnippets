@@ -23,7 +23,7 @@ file.copy(list.files("reference/figures", full.names = TRUE),
 # }
 ```
 
-# shinysnippets <img src="reference/figures/thinkr-hex-shinysnippets.png" align="right" alt="" width="120" />
+# shinysnippets <img src="man/figures/thinkr-hex-shinysnippets.png" align="right" alt="" width="120" />
 
 <!-- badges: start -->
 [![R build status](https://github.com/ThinkR-open/shinysnippets/workflows/R-CMD-check/badge.svg)](https://github.com/ThinkR-open/shinysnippets/actions)
