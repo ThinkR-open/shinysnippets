@@ -1,13 +1,13 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
+# shinysnippets <img src="reference/figures/thinkr-hex-shinysnippets.png" align="right" alt="" width="120" />
+
 <!-- badges: start -->
 
 [![R build
 status](https://github.com/ThinkR-open/shinysnippets/workflows/R-CMD-check/badge.svg)](https://github.com/ThinkR-open/shinysnippets/actions)
 <!-- badges: end -->
-
-# shinysnippets <img src="reference/figures/thinkr-hex-shinysnippets.png" align="right" alt="" width="120" />
 
 The goal of shinysnippets is to save development time while taking
 advantage of Rstudio snippets for Shiny applications.
