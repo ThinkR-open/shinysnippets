@@ -50,3 +50,40 @@ snippet sidebar_page
     }
     
     shinyApp(ui, server)
+    
+    
+
+snippet navbarPage_simple
+	navbarPage(title = ${1:title},
+		tabPanel(title = "first panel"),
+		tabPanel(title = "second panel"),
+		tabPanel(title = "third panel")
+		)
+		
+snippet navbarPage_with_menu	
+	navbarPage(title = ${1:title},
+		tabPanel(title = "first panel"),
+		tabPanel(title = "second panel"),
+		tabPanel(title = "third panel"),
+		navbarMenu(title = ${1:menu_title}, 
+				tabPanel("fourth panel"),
+				tabPanel("fifth panel"),
+				tabPanel("sixth panel")
+				)
+
+snippet downloadButton
+
+		# To copy in the UI
+		downloadButton(outputId = ${1:button_ID}, label = "label")
+		# To copy in the server
+		output$${1:button_ID} <- downloadHandler(
+					filename = function() {
+						paste('data-', Sys.Date(), '.csv', sep='')
+					},
+					content = function(con) {
+						write.csv(${2:df_name}, con)
+					}
+				)
+		# if you want to download in other formats: 
+		# replace '.csv' and write.csv() according to the seeked extension.
+
