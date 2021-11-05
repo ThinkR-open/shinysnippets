@@ -1,20 +1,23 @@
 snippet module
-	${1:name}ui <- function(id){
+	mod_${1:name}_ui <- function(id){
 		ns <- NS(id)
 		tagList(
-		${0}
+		    ${0}
 			)
 		}
 
-	${1:name} <- function(input, output, session){
-		ns <- session\$ns
+	mod_${1:name}_server <- function(id){
+	  moduleServer(id, function(input, output, session){
+	  ns <- session\$ns
+	  
+	  })
 	}
 	
 	# Copy in UI
-	#${1:name}ui("${1:name}ui")
+	#mod_${1:name}_ui("${1:name}_ui")
 	
 	# Copy in server
-	#callModule(${1:name}, "${1:name}ui")
+	#mod_${1:name}_server("${1:name}_ui")
 	
 snippet observe_event
 	observeEvent( ${1:event} , {
