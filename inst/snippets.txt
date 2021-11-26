@@ -1,16 +1,16 @@
 snippet module
-	mod_${1:name}_ui <- function(id){
+	mod_${1:name}_ui <- function(id) {
 		ns <- NS(id)
 		tagList(
-		    ${0}
-			)
-		}
+			${0}
+		)
+	}
 
-	mod_${1:name}_server <- function(id){
-	  moduleServer(id, function(input, output, session){
-	  ns <- session\$ns
-	  
-	  })
+	mod_${1:name}_server <- function(id) {
+		moduleServer(id, function(input, output, session) {
+		ns <- session\$ns
+
+		})
 	}
 	
 	# Copy in UI
