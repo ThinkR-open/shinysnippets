@@ -43,22 +43,25 @@ Editing \> Edit Snippets.
 ### Modules
 
     snippet module
-        ${1:name}ui <- function(id){
+        mod_${1:name}_ui <- function(id) {
             ns <- NS(id)
             tagList(
-            
-                )
-            }
-    
-        ${1:name} <- function(input, output, session){
+                ${0}
+            )
+        }
+
+        mod_${1:name}_server <- function(id) {
+            moduleServer(id, function(input, output, session) {
             ns <- session\$ns
+                
+            })
         }
         
         # Copy in UI
-        ${1:name}ui("${1:name}ui")
+        #mod_${1:name}_ui("${1:name}_ui")
         
         # Copy in server
-        callModule(${1:name}, "${1:name}ui")
+        #mod_${1:name}_server("${1:name}_ui")
 
 ![](man/figures/module_snippet.gif)
 
@@ -71,7 +74,7 @@ Editing \> Edit Snippets.
 
 ![](man/figures/observeEvent_snippet.gif)
 
-### sidebar\_page
+### sidebar_page
 
     snippet sidebar_page
         library(shiny)
