@@ -45,22 +45,27 @@ Editing \> Edit Snippets.
 ### Modules
 
     snippet module
-        ${1:name}ui <- function(id){
+        ${1:name}_ui <- function(id){
             ns <- NS(id)
             tagList(
-            
-                )
-            }
-    
-        ${1:name} <- function(input, output, session){
-            ns <- session\$ns
+
+            )
         }
-        
+    
+        ${1:name}_server <- function(id){
+            moduleServer(
+                id,
+                function(input, output, session){
+                    ns <- session\$ns
+                }
+            )
+        }
+
         # Copy in UI
-        ${1:name}ui("${1:name}ui")
-        
+        ${1:name}_ui("${1:name}_1")
+
         # Copy in server
-        callModule(${1:name}, "${1:name}ui")
+        ${1:name}_server("${1:name}_1")
 
 ![](man/figures/module_snippet.gif)
 
