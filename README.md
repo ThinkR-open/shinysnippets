@@ -12,6 +12,8 @@ status](https://github.com/ThinkR-open/shinysnippets/workflows/R-CMD-check/badge
 The goal of shinysnippets is to save development time while taking
 advantage of Rstudio snippets for Shiny applications.
 
+![](man/figures/best_rstudio_snippet.gif)
+
 ## Installation of snippets
 
 ### Via the package

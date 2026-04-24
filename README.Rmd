@@ -31,6 +31,8 @@ file.copy(list.files("reference/figures", full.names = TRUE),
 
 The goal of shinysnippets is to save development time while taking advantage of Rstudio snippets for Shiny applications.
 
+![](man/figures/best_rstudio_snippet.gif)
+
 ## Installation of snippets
 
 ### Via the package
